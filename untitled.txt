@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kabarak Konnect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5dc; /* beige */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .logo {
+      font-size: 34px;
+      color: #800000; /* maroon */
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      color: #0b3d2e; /* green */
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: block;
+      width: 200px;
+      margin: 10px auto;
+      padding: 12px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .signup {
+      background: #800000;
+      color: white;
+    }
+
+    .login {
+      border: 2px solid #800000;
+      color: #800000;
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 12px;
+      color: #555;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1 class="logo">🔥 Kabarak Konnect</h1>
+    <p class="tagline">Find your match on campus 💘</p>
+
+    <a href="#" class="btn signup">Sign Up</a>
+    <a href="#" class="btn login">Login</a>
+
+    <p class="footer">Exclusive to Kabarak students only</p>
+
+  </div>
+
+</body>
+</html>

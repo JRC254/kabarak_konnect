@@ -1,0 +1,408 @@
+/* =========================
+   KABARAK KONNECT THEME CSS
+   ========================= */
+
+/* General page setup */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #3b0a0a, #7a0f1e);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+/* Headings */
+h1 {
+    margin-bottom: 5px;
+    font-size: 2.2rem;
+    text-align: center;
+    color: #f5d27a;
+}
+
+/* Paragraphs */
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    text-align: center;
+}
+
+/* =========================
+   FORM STYLING (LOGIN/SIGNUP)
+   ========================= */
+
+form {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 300px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(245, 210, 122, 0.3);
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #f5d27a;
+    border: none;
+    border-radius: 8px;
+    color: #3b0a0a;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #ffe08a;
+    transform: scale(1.03);
+}
+
+/* Links */
+a {
+    color: #f5d27a;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   INDEX PAGE BUTTONS FIX
+   ========================= */
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 10px;
+    background: #f5d27a;
+    color: #3b0a0a;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #ffe08a;
+    transform: scale(1.05);
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 2px solid #f5d27a;
+    color: #f5d27a;
+}
+
+.btn.secondary:hover {
+    background: #f5d27a;
+    color: #3b0a0a;
+}
+
+/* =========================
+   BACKGROUND IMAGE
+   ========================= */
+
+body {
+    background: url("kabarak.jpg") no-repeat center center/cover;
+    position: relative;
+}
+
+/* Dark overlay for readability */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(59, 10, 10, 0.6);
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Center container */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================
+   CARD DESIGN (LIKE IMAGE)
+   ========================= */
+
+.card {
+    background: #f5f0e6;
+    padding: 25px;
+    border-radius: 20px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Logo text */
+.logo {
+    color: #7a0f1e;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Tagline */
+.tagline {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Subtext */
+.subtext {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Buttons container */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* SIGNUP button */
+.btn.signup {
+    background: #7a0f1e;
+    color: white;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+/* LOGIN button */
+.btn.login {
+    background: transparent;
+    border: 2px solid #7a0f1e;
+    color: #7a0f1e;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+/* Footer */
+.footer {
+    font-size: 0.7rem;
+    margin-top: 15px;
+    color: #555;
+}
+/* =========================
+   FIX INPUT VISIBILITY
+   ========================= */
+
+input {
+    background: #ffffff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+/* Make placeholder text visible */
+input::placeholder {
+    color: #555;
+}
+
+/* Labels more visible */
+label {
+    color: #f5d27a;
+    font-weight: bold;
+}
+
+/* Fix form contrast */
+form {
+    background: rgba(0, 0, 0, 0.5); /* darker instead of white glass */
+}
+
+/* Fix text inside forms */
+form p {
+    color: #fff;
+}
+/* =========================
+   AUTH PAGES MATCH HOMEPAGE
+   ========================= */
+
+/* Same background as homepage */
+body {
+    background: url("kabarak.jpg") no-repeat center center/cover;
+    position: relative;
+}
+
+/* Overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(59, 10, 10, 0.6);
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Keep content above overlay */
+.container {
+    position: relative;
+    z-index: 1;
+      width: 90%;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+
+  /* KEY FIX */
+  height: auto;
+  min-height: 100vh; /* makes it expand with content */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card (same as homepage) */
+.card {
+    background: #f5f0e6;
+    padding: 25px;
+    border-radius: 20px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Fix form layout inside card */
+form {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* Inputs styled clean */
+input {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+/* Button inside form */
+button {
+    background: #7a0f1e;
+    color: white;
+}
+
+button:hover {
+    background: #5c0b16;
+}
+
+/* Links */
+.card a {
+    color: #7a0f1e;
+}
+/* =========================
+   REMOVE YELLOW ON AUTH PAGES
+   ========================= */
+
+/* Headings inside card */
+.card h1 {
+    color: #7a0f1e; /* maroon */
+}
+
+/* Labels */
+label {
+    color: #333; /* dark instead of gold */
+}
+
+/* Form text */
+.card p {
+    color: #555;
+}
+
+/* Links */
+.card a {
+    color: #7a0f1e;
+}
+
+/* Buttons */
+button {
+    background: #7a0f1e;
+    color: white;
+}
+
+button:hover {
+    background: #5c0b16;
+}
+body {
+    background-image: url("kabarak.jpg");
+    background-size: cover;        /* makes it fill screen */
+    background-position: center;   /* centers image */
+    background-repeat: no-repeat;  /* no tiling */
+}
+
+.photo-grid{
+margin-bottom:20px;
+}
+
+.photo-note{
+margin-bottom:10px;
+font-size:14px;
+}
+
+.main-photo{
+height:150px;
+border:2px dashed maroon;
+border-radius:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+margin-bottom:12px;
+font-weight:bold;
+}
+
+.small-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.small-box{
+height:75px;
+border:2px dashed maroon;
+border-radius:16px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+font-weight:bold;
+}
+
+select,
+textarea{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+border-radius:12px;
+border:1px solid #ccc;
+}
+
+textarea{
+height:90px;
+resize:none;
+}
