@@ -144,10 +144,6 @@ body {
 .container {
     position: relative;
     z-index: 1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* =========================
@@ -270,12 +266,7 @@ body::before {
     position: relative;
     z-index: 1;
       
-
-  /* KEY FIX */
-  height: auto;
-  min-height: 100vh; /* makes it expand with content */
-  display: flex;
-  flex-direction: column;
+  
 }
 
 /* Card (same as homepage) */
@@ -405,4 +396,207 @@ border:1px solid #ccc;
 textarea{
 height:90px;
 resize:none;
+}
+body {
+  margin: 0;
+  font-family: Arial;
+  color: white;
+
+  background-image: url("kabarak.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* dark overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: -1;
+}
+
+.hint {
+  text-align: center;
+  margin-top: 15px;
+  opacity: 0.8;
+}
+
+/* card */
+.card {
+  width: 320px;
+  margin: 40px auto;
+  padding: 18px;
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+}
+
+/* image */
+.img-box {
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* gradient overlay */
+.img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  border-radius: 18px;
+}
+
+/* online dot */
+.online {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 14px;
+  height: 14px;
+  background: limegreen;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+h2 {
+  margin: 10px 0 5px;
+}
+
+.meta {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* tags */
+.tags span {
+  display: inline-block;
+  margin: 5px;
+  padding: 4px 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* actions */
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.actions button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+}
+
+.hi {
+  border: 1px solid rgba(0,200,255,0.4);
+}
+
+.gif {
+  border: 1px solid rgba(255,0,200,0.4);
+}
+
+.message {
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(0,0,0,0.3);
+  color: white;
+}
+body {
+  color: white;
+}
+.faded, .muted, .hint, .meta {
+  color: rgba(255, 255, 255, 0.9) !important;
+  opacity: 1 !important;
+}
+p, span {
+  opacity: 1;
+}
+.card {
+  width: 320px;
+  margin: 40px auto;
+  padding: 18px;
+  border-radius: 22px;
+
+  /* true glass (kept transparent, not dark) */
+  background: rgba(255, 255, 255, 0.10);
+
+  /* stronger blur for depth */
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  /* clearer edge so it doesn't blend into background */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  /* subtle depth without killing glass feel */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+
+  text-align: center;
+}
+.card h2 {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.card p, .card span {
+  text-shadow: 0 1px 4px rgba(0,0,0,0.35);
+}
+body {
+  margin: 0;
+  font-family: Arial;
+
+  background-image: url("kabarak.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  color: white;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  /* THIS balances your image */
+  background: rgba(0, 0, 0, 0.45);
+
+  z-index: -1;
+}
+.card {
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+
+  border-radius: 22px;
+  padding: 18px;
 }

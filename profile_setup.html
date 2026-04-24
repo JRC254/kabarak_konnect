@@ -2,64 +2,256 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Kabarak Konnect - Profile Setup</title>
-<link rel="stylesheet" href="style.css">
-</head>
 
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:
+linear-gradient(rgba(45,0,0,.35),rgba(45,0,0,.35)),
+url("kabarak.jpg");
+background-size:cover;
+background-position:center;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+/* Glass container */
+.container{
+width:100%;
+max-width:390px;
+padding:25px;
+
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+
+border:1px solid rgba(255,255,255,.18);
+border-radius:28px;
+
+box-shadow:0 8px 30px rgba(0,0,0,.25);
+}
+
+h1{
+text-align:center;
+font-size:42px;
+color:#f3d28b;
+margin-bottom:8px;
+}
+
+.subtitle{
+text-align:center;
+color:white;
+margin-bottom:20px;
+}
+
+.note{
+text-align:center;
+color:#f1d9b6;
+margin-bottom:10px;
+font-size:14px;
+}
+
+/* Photo areas */
+.main-photo{
+height:150px;
+border:2px dashed #8a001c;
+border-radius:22px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:20px;
+font-weight:bold;
+color:white;
+
+margin-bottom:14px;
+cursor:pointer;
+
+background:rgba(255,255,255,.04);
+}
+
+.photo-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-bottom:20px;
+}
+
+.photo-box{
+height:85px;
+border:2px dashed #8a001c;
+border-radius:18px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:34px;
+font-weight:bold;
+color:white;
+
+cursor:pointer;
+background:rgba(255,255,255,.04);
+}
+
+.photo-box input,
+.main-photo input{
+display:none;
+}
+
+/* Form inputs */
+input,
+select,
+textarea{
+width:100%;
+padding:16px;
+margin-bottom:15px;
+
+border:none;
+border-radius:18px;
+
+background:rgba(255,255,255,.96);
+font-size:16px;
+}
+
+textarea{
+height:120px;
+resize:none;
+}
+
+/* Button */
+button{
+width:100%;
+padding:17px;
+
+border:none;
+border-radius:18px;
+
+background:#8a001c;
+color:white;
+
+font-size:20px;
+font-weight:bold;
+}
+
+button:active{
+transform:scale(.98);
+}
+
+</style>
+</head>
 <body>
 
 <div class="container">
 
 <h1>Create Your Profile 💘</h1>
-<p>Complete your dating profile</p>
+<p class="subtitle">Complete your dating profile</p>
 
-<form>
+<p class="note">Main photo required *</p>
 
-<!-- Photo Section -->
+<form action="discover.html">
+
+<label class="main-photo">
++ Add Main Photo
+<input type="file">
+</label>
+
 <div class="photo-grid">
 
-<p class="photo-note">Main photo required *</p>
+<label class="photo-box">
++
+<input type="file">
+</label>
 
-<div class="main-photo">
-+ Add Main Photo
+<label class="photo-box">
++
+<input type="file">
+</label>
+
+<label class="photo-box">
++
+<input type="file">
+</label>
+
+<label class="photo-box">
++
+<input type="file">
+</label>
+
 </div>
 
-<div class="small-grid">
-<div class="small-box">+</div>
-<div class="small-box">+</div>
-<div class="small-box">+</div>
-<div class="small-box">+</div>
-</div>
-
-</div>
-
-
-<!-- Profile Fields -->
-<input type="text" placeholder="Full Name" required>
+<input type="text" placeholder="Full Name">
 
 <select required>
-<option value="">Select Course</option>
-<option>Computer Science</option>
-<option>Business</option>
+
+<option value="">Select Course / Program</option>
+
+<optgroup label="Undergraduate Degrees">
+<option>Business & Economics</option>
+<option>Computer Science / IT / Software Engineering</option>
 <option>Law</option>
-<option>Medicine</option>
-<option>Education</option>
+<option>Medicine & Surgery</option>
+<option>Nursing</option>
+<option>Clinical Medicine</option>
+<option>Pharmacy</option>
+<option>Education (Arts / Science)</option>
+<option>Theology</option>
+<option>Mass Communication / Media</option>
+<option>Psychology / Counselling</option>
+<option>Health Sciences</option>
+</optgroup>
+
+<optgroup label="Diploma / Certificate">
+<option>Diploma Student</option>
+<option>Certificate Student</option>
+</optgroup>
+
+<optgroup label="Postgraduate">
+<option>Postgraduate Student</option>
+<option>Masters Student</option>
+<option>PhD Student</option>
+</optgroup>
+
+<option>Other</option>
+
 </select>
 
 <select required>
-<option value="">Select Year</option>
+
+<option value="">Select Year / Level</option>
+
 <option>Year 1</option>
 <option>Year 2</option>
 <option>Year 3</option>
 <option>Year 4</option>
+<option>Year 5</option>
+<option>Year 6</option>
+
+<option>Diploma Year 1</option>
+<option>Diploma Year 2</option>
+<option>Certificate Level</option>
+
+<option>Postgraduate (Masters)</option>
+<option>PhD</option>
+
+<option>Other</option>
+
 </select>
 
-<textarea 
-placeholder="Write a short bio about yourself..."
-maxlength="120"
-required>
-</textarea>
+<textarea placeholder="Write a short bio about yourself..."></textarea>
 
 <button type="submit">
 Continue
