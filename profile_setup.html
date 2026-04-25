@@ -162,7 +162,7 @@ transform:scale(.98);
 
 <p class="note">Main photo required *</p>
 
-<form action="discover.html">
+<form>
 
 <label class="main-photo">
 + Add Main Photo
@@ -192,7 +192,8 @@ transform:scale(.98);
 </label>
 
 </div>
-    <input type="text" placeholder="Full Name" required>
+
+<input type="text" placeholder="Full Name" required>
 
 <select required>
 
@@ -252,14 +253,13 @@ transform:scale(.98);
 
 <textarea placeholder="Write a short bio about yourself..."></textarea>
 
-
+<!-- FIXED BUTTON (THIS WAS THE PROBLEM) -->
+<button type="button" onclick="window.location.href='discover.html'">
+  Continue
+</button>
 
 </form>
-<a href="Discover.html">
-  <button type="button">
-    Continue
-  </button>
-</a>
+
 </div>
 
 </body>
