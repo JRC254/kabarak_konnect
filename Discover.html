@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Discover</title>
 
 <link rel="stylesheet" href="style.css">
@@ -14,30 +14,41 @@
 
 <div class="discover-card" id="card">
 
-<div class="image-container">
-<img id="profileImage" src="aisha.jpg">
+    <div class="image-container">
+        <img id="profileImage" src="aisha.jpg">
 
-<div class="online-dot"></div>
+        <div class="online-dot"></div>
 
-<div class="overlay-info">
-<h2 id="name"></h2>
-<p id="meta"></p>
+        <div class="overlay-info">
+            <h2 id="name"></h2>
+            <p id="meta"></p>
+        </div>
+    </div>
+
+    <div class="details">
+        <p id="bio"></p>
+
+        <div class="extra">
+            <span id="tag1"></span>
+            <span id="tag2"></span>
+            <span id="tag3"></span>
+        </div>
+
+        <!-- 🔥 ADDED BUTTONS -->
+        <div class="actions">
+            <button class="message-btn">💬 Message</button>
+            <button class="gif-btn">🎬 GIF</button>
+        </div>
+
+    </div>
+
 </div>
 
-</div>
-
-<div class="details">
-
-<p id="bio"></p>
-
-<div class="extra">
-<span id="tag1"></span>
-<span id="tag2"></span>
-<span id="tag3"></span>
-</div>
-
-</div>
-
+<!-- 🔥 BOTTOM NAV -->
+<div class="bottom-nav">
+    <button>🔥</button>
+    <button>💬</button>
+    <button>👤</button>
 </div>
 
 
@@ -124,9 +135,7 @@ card.style.transition=".3s";
 
 /* SWIPE */
 card.addEventListener("touchstart",function(e){
-
 startX=e.touches[0].clientX;
-
 });
 
 card.addEventListener("touchend",function(e){
