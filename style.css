@@ -913,3 +913,213 @@ form.signup-form p {
 form.signup-form button {
     margin-top: 12px;
 }
+/* =========================
+   DISCOVER PAGE STYLES
+   ========================= */
+
+.discover-card {
+    width: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(245, 210, 122, 0.3);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* IMAGE */
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+/* NAME OVERLAY */
+.overlay-info {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: white;
+}
+
+.overlay-info h2 {
+    margin: 0;
+    color: #f5d27a;
+}
+
+.overlay-info p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+/* ONLINE DOT */
+.online-dot {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 12px;
+    height: 12px;
+    background: #00ff88;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ff88;
+}
+
+/* DETAILS */
+.details {
+    padding: 15px;
+}
+
+.details p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* EXTRA TAGS */
+.extra {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.extra span {
+    background: rgba(255,255,255,0.2);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+}
+/* =========================
+   DISCOVER PAGE LAYOUT FIX
+   ========================= */
+
+/* Fix container stacking */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ensure headings sit on top */
+.container h1,
+.container p {
+    text-align: center;
+    width: 100%;
+}
+
+/* Add spacing between text and card */
+.discover-card {
+    margin-top: 10px;
+}
+
+/* Override body centering (important) */
+body {
+    justify-content: flex-start;
+    padding-top: 40px;
+}
+/* =========================
+   SWIPE FIX (LOCK PAGE)
+   ========================= */
+
+/* Stop sideways scrolling */
+body {
+    overflow-x: hidden;
+}
+
+/* Make sure the card handles all touch gestures */
+.discover-card {
+    touch-action: none; /* 🔥 key fix */
+}
+body{
+overflow-x:hidden;
+}
+
+.subtitle{
+text-align:center;
+margin-bottom:25px;
+color:white;
+}
+
+.discover-card{
+
+width:320px;
+border-radius:22px;
+overflow:hidden;
+
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(14px);
+
+border:1px solid rgba(245,210,122,.3);
+
+box-shadow:0 10px 30px rgba(0,0,0,.45);
+
+touch-action:none;
+
+transition:transform .3s ease;
+
+margin-top:10px;
+}
+
+.image-container{
+position:relative;
+}
+
+.image-container img{
+width:100%;
+height:280px;
+object-fit:cover;
+}
+
+.online-dot{
+position:absolute;
+top:15px;
+right:15px;
+
+width:12px;
+height:12px;
+
+background:#00ff88;
+border-radius:50%;
+box-shadow:0 0 10px #00ff88;
+}
+
+.overlay-info{
+position:absolute;
+bottom:15px;
+left:15px;
+color:white;
+}
+
+.overlay-info h2{
+color:#f5d27a;
+margin:0;
+}
+
+.overlay-info p{
+margin:0;
+font-size:.85rem;
+}
+
+.details{
+padding:15px;
+}
+
+.extra{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+}
+
+.extra span{
+background:rgba(255,255,255,.2);
+padding:6px 10px;
+border-radius:10px;
+font-size:.75rem;
+}
