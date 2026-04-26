@@ -1694,3 +1694,54 @@ body {
     letter-spacing: 0.5px !important;
 }
 
+/* ============ 🎯 PERFECT CENTERING & KEYBOARD FIX ============ */
+
+/* 1. Use min-height instead of height to allow shifting */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important; /* Forces vertical centering */
+    min-height: 100vh !important; /* Important for keyboard shift */
+    background: url("kabarak.jpg") no-repeat center center/cover fixed !important;
+}
+
+/* 2. The main container should expand to fill the body */
+.container {
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important; /* Takes up all space to keep card centered */
+    padding: 20px;
+}
+
+/* 3. The Card Panel */
+.card {
+    width: 90% !important;
+    max-width: 320px !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 22px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 25px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4) !important;
+    
+    /* This ensures it stays centered and doesn't fly to the top */
+    margin: auto !important; 
+}
+
+/* 4. Mobile Keyboard Hack */
+@media screen and (max-height: 500px) {
+    body {
+        justify-content: flex-start !important; /* Moves content up when height is small (keyboard open) */
+        padding-top: 20px !important;
+    }
+    
+    .card {
+        margin-top: 10px !important;
+    }
+}
