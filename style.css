@@ -1786,3 +1786,29 @@ body {
         padding-top: 30px !important;
     }
 }
+/* ============ 🎯 DISCOVER PAGE ONLY (PUSH UP) ============ */
+
+/* Only shifts the body if it has the .discover-page class */
+body.discover-page {
+    justify-content: flex-start !important; 
+    padding-top: 30px !important;
+    padding-bottom: 120px !important; 
+    height: auto !important;
+    min-height: 100vh !important;
+}
+
+/* Specifically tightens the headers on the discover page */
+.discover-page h1 {
+    margin-top: 0 !important;
+    margin-bottom: 5px !important;
+}
+
+.discover-page .subtitle {
+    margin-bottom: 15px !important;
+}
+
+/* Moves the card up specifically on this page */
+.discover-page .discover-card {
+    margin-top: 5px !important;
+    margin-bottom: 30px !important;
+}
