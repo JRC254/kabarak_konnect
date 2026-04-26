@@ -1745,3 +1745,44 @@ body {
         margin-top: 10px !important;
     }
 }
+/* ============ 🎯 VERTICAL CENTERING MASTER FIX ============ */
+
+/* 1. Force the body to be a full-screen flexbox */
+html, body {
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important; /* This is what centers vertically */
+    background-attachment: fixed !important;
+}
+
+/* 2. Fix the container to stay in the middle */
+.container {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    flex-grow: 1 !important; /* Fills the body to allow centering */
+    z-index: 1;
+}
+
+/* 3. Ensure the card doesn't have top margins pulling it up */
+.card {
+    margin: 0 auto !important; /* Centers it horizontally and resets top push */
+    position: relative !important;
+}
+
+/* 4. Keyboard handling: Only move to top if screen is tiny */
+@media screen and (max-height: 550px) {
+    body {
+        justify-content: flex-start !important;
+        padding-top: 30px !important;
+    }
+}
