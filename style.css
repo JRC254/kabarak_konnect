@@ -1881,3 +1881,1136 @@ body.discover-page {
     padding-bottom: 140px !important; /* Slightly more room for indicator + nav */
 }
 
+/* PAGE */
+body{
+background:url("kabarak.jpg") no-repeat center center/cover;
+min-height:100vh;
+margin:0;
+color:white;
+font-family:Arial,sans-serif;
+}
+
+/* HEADER */
+h1{
+margin:20px 20px 10px;
+color:#f5d27a;
+font-size:28px;
+}
+
+/* CHAT LIST */
+.chat-list{
+width:100%;
+padding:0 12px 20px;
+}
+
+/* EACH ROW (less bulky than big glass panels) */
+.chat-item{
+display:flex;
+align-items:center;
+gap:12px;
+
+padding:12px 14px;
+margin-bottom:8px;
+
+text-decoration:none;
+color:white;
+
+background:rgba(255,255,255,.06);
+backdrop-filter:blur(10px);
+
+border-radius:14px;   /* smaller */
+}
+
+/* AVATAR */
+.chat-item img{
+width:52px;
+height:52px;
+border-radius:50%;
+object-fit:cover;
+flex-shrink:0;
+}
+
+/* MIDDLE TEXT */
+.chat-info{
+flex:1;
+min-width:0;
+}
+
+.chat-info h3{
+margin:0 0 4px;
+font-size:16px;
+color:#f5d27a;
+}
+
+.chat-info p{
+margin:0;
+font-size:13px;
+opacity:.85;
+
+/* makes long text truncate like WhatsApp */
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+
+/* RIGHT SIDE (time + online) */
+.chat-meta{
+display:flex;
+flex-direction:column;
+align-items:flex-end;
+gap:6px;
+}
+
+.chat-time{
+font-size:11px;
+opacity:.75;
+}
+
+.online-dot{
+width:9px;
+height:9px;
+background:#00ff88;
+border-radius:50%;
+}
+/* ONLY MESSAGES PAGE */
+.messages-page{
+margin:0;
+padding-top:20px;
+
+background:url("kabarak.jpg") no-repeat center center/cover;
+min-height:100vh;
+
+display:block !important;
+justify-content:unset !important;
+align-items:unset !important;
+
+color:white;
+font-family:Arial,sans-serif;
+}
+
+/* top-aligned list */
+.messages-page .chat-list{
+width:100%;
+max-width:100%;
+margin:0;
+padding:0 12px 20px;
+}
+
+/* slim whatsapp-like rows */
+.messages-page .chat-item{
+display:flex;
+align-items:center;
+gap:12px;
+
+padding:12px 14px;
+margin-bottom:8px;
+
+text-decoration:none;
+color:white;
+
+background:rgba(255,255,255,.06);
+backdrop-filter:blur(10px);
+
+border-radius:14px;
+}
+
+.messages-page .chat-item img{
+width:52px;
+height:52px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.messages-page h1{
+margin:20px;
+font-size:28px;
+color:#f5d27a;
+}
+/* ============ 💬 MESSAGES PAGE & 4-BUTTON NAV ============ */
+
+/* 1. Page Layout */
+.messages-page {
+    justify-content: flex-start !important;
+    padding-top: 20px !important;
+    padding-bottom: 100px !important; /* Space for Nav Bar */
+    height: auto !important;
+    min-height: 100vh !important;
+}
+
+/* 2. Chat Item Container */
+.chat-list {
+    width: 90% !important;
+    max-width: 400px !important;
+    margin: 20px auto !important;
+}
+
+.chat-item {
+    display: flex !important;
+    align-items: center !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(15px) !important;
+    padding: 15px !important;
+    border-radius: 18px !important;
+    margin-bottom: 12px !important;
+    text-decoration: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    position: relative !important;
+}
+
+.chat-img {
+    width: 55px !important;
+    height: 55px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    margin-right: 15px !important;
+    border: 2px solid #ff4b2b !important;
+}
+
+/* 3. Stacking Name Top / Message Bottom */
+.chat-info {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+}
+
+.chat-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.chat-header h3 {
+    margin: 0 !important;
+    font-size: 16px !important;
+    color: #f5d27a !important;
+}
+
+.chat-time {
+    font-size: 11px !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.chat-info p {
+    margin: 4px 0 0 0 !important;
+    font-size: 13px !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 180px !important;
+}
+
+/* 4. 4-Button Navigation Bar */
+.bottom-nav {
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 0 10px !important;
+    align-items: center !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 75px !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(20px) !important;
+    z-index: 3000 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.nav-btn {
+    text-decoration: none !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.nav-btn span {
+    font-size: 18px !important;
+}
+
+.nav-btn p {
+    font-size: 9px !important;
+    margin-top: 4px !important;
+    text-transform: uppercase !important;
+}
+
+.nav-btn.active {
+    color: #ff4b2b !important;
+}
+
+/* Online Indicator */
+.online-dot {
+    width: 12px;
+    height: 12px;
+    background: #44ff44;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: 2px solid #1a1a1a;
+}
+/* ============ 💬 WHATSAPP-STYLE MESSAGES PAGE ============ */
+
+.messages-page {
+    display: block !important; /* Changed from flex to block to allow natural scrolling */
+    height: auto !important;
+    min-height: 100vh !important;
+    padding-bottom: 100px !important; /* Space for the nav bar */
+    overflow-y: auto !important; /* Enables scrolling */
+    background-attachment: fixed !important;
+}
+
+.chat-list {
+    width: 95% !important; /* Makes the panels wider like WhatsApp */
+    max-width: 500px !important;
+    margin: 10px auto !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-item {
+    display: flex !important;
+    align-items: center !important;
+    background: rgba(255, 255, 255, 0.08) !important; /* Subtle glass look */
+    backdrop-filter: blur(10px) !important;
+    padding: 12px 15px !important;
+    margin-bottom: 8px !important; /* Tighter spacing between chats */
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; /* Divider line */
+    transition: background 0.3s;
+}
+
+.chat-item:active {
+    background: rgba(255, 255, 255, 0.15) !important; /* Feedback when tapped */
+}
+
+.chat-img {
+    width: 55px !important;
+    height: 55px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    margin-right: 15px !important;
+    flex-shrink: 0 !important; /* Prevents image from squishing */
+}
+
+.chat-info {
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important; /* Keeps text inside the panel */
+}
+
+.chat-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    width: 100% !important;
+}
+
+.chat-header h3 {
+    margin: 0 !important;
+    font-size: 17px !important;
+    color: #f5d27a !important;
+    font-weight: 600 !important;
+}
+
+.chat-time {
+    font-size: 12px !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.chat-info p {
+    margin: 4px 0 0 0 !important;
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    text-align: left !important;
+    /* The WhatsApp "Single Line" Preview */
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important; 
+    width: 100% !important;
+}
+/* ============ 💬 FULL-WIDTH MESSAGES (WHATSAPP STYLE) ============ */
+
+.messages-page {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important; /* Prevents side-scrolling */
+}
+
+.chat-list {
+    width: 100% !important; /* Forces it to touch both edges */
+    max-width: none !important; /* Removes the 400px limit */
+    margin: 10px 0 !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-item {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important; /* Stretches panel to full screen width */
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px) !important;
+    padding: 15px 20px !important; /* Extra horizontal padding for the text */
+    margin-bottom: 0 !important; /* Removes gap between cards */
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    
+    /* WhatsApp separator line */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.chat-item:active {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.chat-img {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    margin-right: 15px !important;
+    flex-shrink: 0 !important;
+}
+
+.chat-info {
+    flex-grow: 1 !important;
+    overflow: hidden !important;
+}
+
+.chat-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.chat-info p {
+    margin: 5px 0 0 0 !important;
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    /* Keeps preview as one clean line */
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    width: 100% !important;
+}
+/* ============ 💬 SLENDER & FULL-WIDTH MESSAGES ============ */
+
+.messages-page {
+    display: block !important;
+    width: 100% !important;
+    padding-bottom: 100px !important;
+    overflow-x: hidden !important;
+}
+
+.chat-list {
+    width: 100% !important;
+    margin: 10px 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.chat-item {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    backdrop-filter: blur(10px) !important;
+    
+    /* SLENDER HEIGHT: Lowered vertical padding */
+    padding: 8px 15px !important; 
+    
+    /* SPACE BETWEEN: Small gap between slender bars */
+    margin-bottom: 4px !important; 
+    
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.chat-img {
+    /* SLENDER IMAGE: Smaller size to fit the thinner bar */
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
+    margin-right: 12px !important;
+    flex-shrink: 0 !important;
+    border: 1.5px solid #ff4b2b !important;
+}
+
+.chat-info {
+    flex-grow: 1 !important;
+    overflow: hidden !important;
+}
+
+.chat-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.chat-header h3 {
+    margin: 0 !important;
+    font-size: 15px !important; /* Slightly smaller for the slender look */
+    color: #f5d27a !important;
+}
+
+.chat-time {
+    font-size: 11px !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.chat-info p {
+    margin: 2px 0 0 0 !important;
+    font-size: 12.5px !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+/* Online Dot - Adjusted for slender height */
+.online-dot {
+    width: 9px;
+    height: 9px;
+    background: #44ff44;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid #1a1a1a;
+}
+/* Chat Room Layout */
+.message-container {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 15px 100px; /* Space for fixed header/footer */
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.message {
+    max-width: 75%;
+    padding: 10px 15px;
+    border-radius: 18px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    position: relative;
+}
+
+/* Their Message */
+.incoming {
+    align-self: flex-start;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-bottom-left-radius: 4px;
+}
+
+/* Your Message */
+.outgoing {
+    align-self: flex-end;
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.msg-time {
+    font-size: 9px;
+    opacity: 0.5;
+    display: block;
+    margin-top: 4px;
+    text-align: right;
+}
+/* ============ 💬 CHAT ROOM STYLES ============ */
+
+.chat-page {
+    background: #000; /* AMOLED Black */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents whole body scroll, we only scroll the container */
+}
+
+/* Header Styling */
+.chat-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+}
+
+.back-btn {
+    color: #f5d27a;
+    text-decoration: none;
+    margin-right: 12px;
+}
+
+.header-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff4b2b;
+    margin-right: 12px;
+}
+
+.header-info h3 {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #44ff44;
+    border-radius: 50%;
+}
+
+.status-text {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Message Container */
+.message-container {
+    display: flex;
+    flex-direction: column;
+    padding: 85px 15px 90px; /* Space for fixed Header & Input */
+    height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.message {
+    max-width: 75%;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.incoming {
+    align-self: flex-start;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 18px 18px 18px 4px;
+}
+
+.outgoing {
+    align-self: flex-end;
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    color: white;
+    border-radius: 18px 18px 4px 18px;
+}
+
+.msg-time {
+    font-size: 10px;
+    opacity: 0.5;
+    display: block;
+    margin-top: 5px;
+    text-align: right;
+}
+
+/* Input Area Styling */
+.chat-input-area {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(20, 20, 20, 0.9);
+    backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+}
+
+.chat-input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 18px;
+    border-radius: 25px;
+    color: white;
+    outline: none;
+}
+
+.send-btn {
+    background: #ff4b2b;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.send-btn:active {
+    transform: scale(0.9);
+}
+/* ============ 📱 WHATSAPP-STYLE HEADER ============ */
+
+.chat-header {
+    display: flex !important;
+    align-items: center !important;
+    padding: 10px 15px !important;
+    background: rgba(15, 15, 15, 0.95) !important; /* Darker for premium feel */
+    backdrop-filter: blur(25px) !important;
+    height: 65px !important;
+}
+
+/* Arrange back button and profile together */
+.chat-header .back-btn {
+    margin-right: 10px !important;
+    font-size: 20px !important;
+    color: #f5d27a !important;
+}
+
+.header-img {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    margin-right: 12px !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.header-info {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+.header-info h3 {
+    font-size: 16px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+
+.status-container {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    margin-top: 1px !important;
+}
+
+.status-dot {
+    width: 7px !important;
+    height: 7px !important;
+    background: #44ff44 !important;
+    border-radius: 50% !important;
+}
+
+.status-text {
+    font-size: 11px !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* ============ 💬 OPAQUE CHAT BUBBLES ============ */
+
+.message {
+    max-width: 80% !important;
+    padding: 12px 16px !important;
+    font-size: 14.5px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important; /* Adds depth */
+}
+
+/* Incoming: Darker gray/glass for better text reading */
+.incoming {
+    background: rgba(45, 45, 45, 0.85) !important; 
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #eee !important;
+}
+
+/* Outgoing: Richer, more solid orange-red */
+.outgoing {
+    background: linear-gradient(135deg, #ff4b2b 0%, #ff416c 100%) !important;
+    opacity: 0.95 !important; /* Almost solid for maximum clarity */
+    color: #fff !important;
+}
+
+.msg-time {
+    font-size: 10px !important;
+    margin-top: 6px !important;
+    font-weight: 500 !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+/* ============ 📱 WHATSAPP LEFT-ALIGNED HEADER ============ */
+
+.chat-header {
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 10px !important; /* Tightened padding */
+    background: rgba(15, 15, 15, 0.98) !important;
+    backdrop-filter: blur(25px) !important;
+    height: 65px !important;
+    gap: 0 !important; /* We'll use margins for better control */
+}
+
+/* Back button sits on the far left */
+.chat-header .back-btn {
+    padding: 10px !important;
+    margin-right: 2px !important;
+    color: #f5d27a !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Profile image right after back button */
+.header-img {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    margin-right: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    object-fit: cover !important;
+}
+
+/* Name and status group together on the left */
+.header-info {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    flex: 1 !important; /* Takes up remaining space to keep them left-aligned */
+}
+
+.header-info h3 {
+    font-size: 16px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+}
+
+.status-container {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    margin-top: 1px !important;
+}
+
+.status-dot {
+    width: 7px !important;
+    height: 7px !important;
+    background: #44ff44 !important;
+    border-radius: 50% !important;
+}
+
+.status-text {
+    font-size: 11px !important;
+    color: rgba(68, 255, 68, 0.9) !important; /* Matches dot color for better look */
+    text-align: left !important;
+}
+/* ============ 📜 SCROLLABLE CHAT AREA ============ */
+
+.chat-page {
+    /* Prevents the entire screen from bouncing/scrolling */
+    height: 100vh !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.message-container {
+    flex: 1 !important; /* Takes up all space between header and input */
+    overflow-y: auto !important; /* Enables vertical scrolling */
+    padding: 20px 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    
+    /* Smooth scrolling for mobile */
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+/* Custom Scrollbar to keep it "Slender" and Minimalist */
+.message-container::-webkit-scrollbar {
+    width: 4px !important;
+}
+
+.message-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 10px !important;
+}
+
+/* Ensure Header and Input stay on top/bottom */
+.chat-header {
+    position: relative !important; /* No longer needs 'fixed' if using flex column */
+    z-index: 10 !important;
+}
+
+.chat-input-area {
+    position: relative !important; 
+    z-index: 10 !important;
+}
+/* ============ 📱 GLOBAL CHAT PAGE FIXES ============ */
+
+.chat-page {
+    background: #000; /* AMOLED Black for battery saving */
+    margin: 0;
+    padding: 0;
+    height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important; /* Prevents whole-page bounce */
+    font-family: sans-serif;
+}
+
+/* ============ 🔝 WHATSAPP-STYLE HEADER ============ */
+
+.chat-header {
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 10px !important;
+    background: rgba(18, 18, 18, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    height: 65px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    z-index: 1000;
+}
+
+.chat-header .back-btn {
+    padding: 8px !important;
+    color: #f5d27a !important; /* Matches your theme gold */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.header-img {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    margin-right: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    object-fit: cover !important;
+}
+
+.header-info {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important; /* Keeps name/status left-aligned */
+}
+
+.header-info h3 {
+    font-size: 16px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+
+.status-container {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+}
+
+.status-dot {
+    width: 7px !important;
+    height: 7px !important;
+    background: #44ff44 !important; /* Online Green */
+    border-radius: 50% !important;
+}
+
+.status-text {
+    font-size: 11px !important;
+    color: #44ff44 !important;
+    opacity: 0.9;
+}
+
+/* ============ 📜 SCROLLABLE MESSAGE AREA ============ */
+
+.message-container {
+    flex: 1 !important;
+    overflow-y: auto !important;
+    padding: 20px 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+/* Hide scrollbar for a cleaner look while keeping functionality */
+.message-container::-webkit-scrollbar {
+    width: 3px;
+}
+.message-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.message {
+    max-width: 80% !important;
+    padding: 10px 15px !important;
+    margin-bottom: 12px !important;
+    font-size: 14.5px !important;
+    line-height: 1.4 !important;
+    position: relative !important;
+}
+
+/* Incoming Bubbles (The Match) */
+.incoming {
+    align-self: flex-start !important;
+    background: rgba(40, 40, 40, 0.9) !important; /* Opaque for clarity */
+    color: #fff !important;
+    border-radius: 18px 18px 18px 4px !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Outgoing Bubbles (You) */
+.outgoing {
+    align-self: flex-end !important;
+    background: linear-gradient(135deg, #ff4b2b 0%, #ff416c 100%) !important;
+    color: #fff !important;
+    border-radius: 18px 18px 4px 18px !important;
+}
+
+.msg-time {
+    font-size: 10px !important;
+    display: block !important;
+    text-align: right !important;
+    margin-top: 5px !important;
+    opacity: 0.6 !important;
+}
+
+/* ============ ⌨️ FIXED INPUT BAR ============ */
+
+.chat-input-area {
+    padding: 12px 15px !important;
+    background: rgba(15, 15, 15, 0.95) !important;
+    backdrop-filter: blur(15px) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.chat-input {
+    flex: 1 !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 12px 18px !important;
+    border-radius: 25px !important;
+    color: #fff !important;
+    outline: none !important;
+}
+
+.send-btn {
+    background: #ff4b2b !important;
+    border: none !important;
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    cursor: pointer !important;
+}
+/* ============ 💎 RESTORE GLASSMISM FOR MESSAGES ============ */
+
+/* This targets ONLY the main messages list page */
+.messages-page .chat-item {
+    background: rgba(255, 255, 255, 0.1) !important; /* Back to transparent */
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    height: auto !important;
+    padding: 18px 15px !important;
+    margin-bottom: 12px !important;
+    border-radius: 20px !important;
+}
+
+/* Fixes the solid backgrounds appearing behind text */
+.messages-page .chat-info, 
+.messages-page .chat-header,
+.messages-page .chat-info p,
+.messages-page .chat-header h3 {
+    background: transparent !important;
+}
+
+.messages-page .chat-header h3 {
+    color: #f5d27a !important; /* Your signature gold */
+}
+/* ============ 💎 CLEAN GLASS PANELS FIX ============ */
+
+/* Remove any background or height limits from internal containers */
+.messages-page .chat-item div,
+.messages-page .chat-info,
+.messages-page .chat-header {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: auto !important;
+    width: 100% !important;
+}
+
+/* Ensure the main panel stays as the only visible container */
+.messages-page .chat-item {
+    background: rgba(255, 255, 255, 0.1) !important; /* The primary glass layer */
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 15px !important;
+    border-radius: 20px !important;
+    text-decoration: none !important;
+}
+/* ============ 💎 TOTAL GLASS CLEANUP ============ */
+
+/* Force every container inside the chat-item to be invisible */
+.messages-page .chat-item * {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Ensure the text doesn't have any weird spacing creating "box" looks */
+.messages-page .chat-info {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Redefine the main panel as the ONLY source of color/blur */
+.messages-page .chat-item {
+    background: rgba(255, 255, 255, 0.1) !important; /* Pure Glass */
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 20px !important;
+    padding: 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    overflow: hidden !important; /* Keeps it clean */
+}
