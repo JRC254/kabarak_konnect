@@ -3,6 +3,11 @@
    ========================= */
 
 /* General page setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
@@ -3013,4 +3018,1331 @@ color:#f5d27a;
     align-items: center !important;
     text-decoration: none !important;
     overflow: hidden !important; /* Keeps it clean */
+}
+/* ============ 💎 UNIFIED GLASS PANELS ============ */
+
+.messages-page .chat-item {
+    /* This color matches the light grey of the rectangles */
+    background: rgba(255, 255, 255, 0.15) !important; 
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px);
+    
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 18px 15px !important;
+    margin-bottom: 15px !important;
+    text-decoration: none !important;
+    width: 95%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 🔥 KILL THE RECTANGLES: Force inner parts to match the panel color */
+.messages-page .chat-item *,
+.messages-page .chat-info,
+.messages-page .chat-header {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: auto !important;
+}
+
+/* Make sure text is positioned correctly within the new unified panel */
+.messages-page .chat-info {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important;
+    text-align: left !important;
+}
+
+.messages-page .chat-info h3 {
+    color: #f5d27a !important; /* Gold */
+    font-size: 17px !important;
+    margin: 0 !important;
+    background: transparent !important;
+}
+
+.messages-page .chat-info p {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 14px !important;
+    margin: 4px 0 0 0 !important;
+    background: transparent !important;
+}
+/* ============ 💎 SLENDER UNIFIED PANELS ============ */
+
+.messages-page .chat-item {
+    /* Bring back the slender width */
+    width: 85% !important; 
+    margin: 0 auto 15px auto !important; /* Centers it with space at bottom */
+    
+    /* Matches the exact color of those inner boxes */
+    background: rgba(255, 255, 255, 0.18) !important; 
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px);
+    
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 15px !important;
+    text-decoration: none !important;
+}
+
+/* 🔥 KILL THE INTERNAL RECTANGLES WITHOUT CHANGING SIZE */
+.messages-page .chat-item *,
+.messages-page .chat-info,
+.messages-page .chat-header {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: auto !important; /* Stops it from stretching the panel */
+}
+
+/* Keep the text tight and slender */
+.messages-page .chat-info {
+    display: flex !important;
+    flex-direction: column !important;
+    padding-left: 10px !important;
+}
+
+.messages-page .chat-info h3 {
+    color: #f5d27a !important;
+    font-size: 16px !important;
+    margin: 0 !important;
+}
+
+.messages-page .chat-info p {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 13px !important;
+    margin-top: 2px !important;
+}
+/* ============ 🚀 LENGTHY & TIGHT UNIFIED PANELS ============ */
+
+.messages-page .chat-item {
+    /* Make them lengthy (almost full width) */
+    width: 96% !important; 
+    margin: 0 auto 4px auto !important; /* Tiny 4px space between panels */
+    
+    /* Solidify the color to match the rectangles */
+    background: rgba(45, 45, 45, 0.95) !important; 
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 12px !important; /* Slightly sharper for the lengthy look */
+    
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 15px !important;
+    text-decoration: none !important;
+    backdrop-filter: none !important; /* Kill blur to help colors match */
+}
+
+/* 🔥 THE RECTANGLE KILLER (FORCE ALL INNER TAGS TO MATCH) */
+.messages-page .chat-item *, 
+.messages-page .chat-info, 
+.messages-page .chat-header,
+.messages-page .chat-item div {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: auto !important;
+    width: 100% !important; /* Ensure they fill the panel without gaps */
+    display: flex !important;
+}
+
+/* Ensure the text stays clean on the new dark background */
+.messages-page .chat-info {
+    flex-direction: column !important;
+    padding-left: 12px !important;
+}
+
+.messages-page .chat-info h3 {
+    color: #f5d27a !important; /* Gold name */
+    font-size: 16px !important;
+    margin: 0 !important;
+}
+
+.messages-page .chat-info p {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 13px !important;
+    margin: 2px 0 0 0 !important;
+}
+
+/* Tighten the profile pic border */
+.messages-page .chat-img {
+    width: 50px !important;
+    height: 50px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+/* ============ 🌑 DARKENED BACKGROUND ============ */
+body {
+    /* Slightly darker gradient to make the panels pop */
+    background: linear-gradient(135deg, #1a0505, #2c050a) !important;
+}
+
+/* ============ 💬 WHATSAPP-STYLE LIST ALIGNMENT ============ */
+
+.messages-page .chat-item {
+    width: 98% !important; /* Lengthy look */
+    margin: 0 auto 2px auto !important; /* Super tight "lil space" */
+    background: rgba(30, 30, 30, 0.95) !important; /* Solid dark panels */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; /* Subtle separator */
+    border-radius: 0 !important; /* WhatsApp uses flat lists or very small radius */
+    
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 15px !important;
+    text-decoration: none !important;
+}
+
+/* KILL THE RECTANGLES PERMANENTLY */
+.messages-page .chat-item *,
+.messages-page .chat-info,
+.messages-page .chat-header {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* WhatsApp Image Style */
+.messages-page .chat-img {
+    width: 55px !important;
+    height: 55px !important;
+    border-radius: 50% !important;
+    margin-right: 15px !important;
+    object-fit: cover !important;
+}
+
+/* Container for all text */
+.messages-page .chat-info {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Top Row: Name and Time */
+.messages-page .chat-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-bottom: 4px !important;
+}
+
+.messages-page .chat-header h3 {
+    color: #ececec !important; /* Clean white-grey for name */
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+}
+
+/* The Time (Pinned to right like WhatsApp) */
+.messages-page .chat-header span,
+.messages-page .time {
+    color: #8696a0 !important; /* WhatsApp secondary text color */
+    font-size: 12px !important;
+}
+
+/* Bottom Row: Message Preview */
+.messages-page .chat-info p {
+    color: #8696a0 !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important; /* Cuts off long texts with ... */
+    width: 250px !important; /* Adjust based on your screen width */
+}
+/* ============ 🌑 DYNAMIC BACKGROUND SETUP ============ */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    /* Darkens the image slightly so white text and glass pop */
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+                url('kabarak.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ============ 💬 WHATSAPP-STYLE GLASS LIST ============ */
+
+.messages-page {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.messages-page .chat-item {
+    width: 100% !important; /* Full width like WhatsApp */
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    text-decoration: none !important;
+    
+    /* Sexy Glassmorphism */
+    background: rgba(255, 255, 255, 0.06) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px);
+    
+    /* Thin separator instead of chunky panels */
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1) !important;
+    margin-bottom: 0 !important; 
+}
+
+/* 🔥 THE FINAL RECTANGLE KILLER */
+.messages-page .chat-item *,
+.messages-page .chat-info,
+.messages-page .chat-header,
+.messages-page .chat-item div {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Profile Picture Style */
+.messages-page .chat-img {
+    width: 55px !important;
+    height: 55px !important;
+    border-radius: 50% !important;
+    margin-right: 15px !important;
+    object-fit: cover !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Text Container */
+.messages-page .chat-info {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Top Row: Name and Time */
+.messages-page .chat-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.messages-page .chat-header h3 {
+    color: #fff !important; 
+    font-size: 16.5px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    text-align: left !important;
+}
+
+.messages-page .time {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 12px !important;
+}
+
+/* Bottom Row: Message Preview */
+.messages-page .chat-info p {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 14px !important;
+    margin: 2px 0 0 0 !important;
+    text-align: left !important;
+    /* Keeps text in one line with ellipsis (...) */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+
+/* ============ ⌨️ INPUT AREA & NAV (KEEPING YOUR EXISTING) ============ */
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    backdrop-filter: blur(15px);
+}
+
+.nav-item {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+    text-align: center;
+}
+
+.nav-item.active {
+    color: #ff4b2b;
+}
+/* ============ 🌑 KABARAK BACKGROUND RESTORED ============ */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Darkens the image just enough so the white text pops, but silhouettes stay visible */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('kabarak.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ============ 💬 WHATSAPP-STYLE GLASS LIST ============ */
+
+.messages-page {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.messages-page .chat-item {
+    width: 100% !important; /* Lengthy look */
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    text-decoration: none !important;
+    
+    /* Clean Glassmorphism */
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px);
+    
+    /* Subtle separator line (WhatsApp style) */
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1) !important;
+    margin-bottom: 0 !important; 
+    border-radius: 0 !important;
+}
+
+/* 🔥 THE RECTANGLE KILLER: Forces all nested divs to be transparent */
+.messages-page .chat-item *,
+.messages-page .chat-info,
+.messages-page .chat-header,
+.messages-page .chat-item div {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: auto !important;
+}
+
+/* Profile Picture */
+.messages-page .chat-img {
+    width: 55px !important;
+    height: 55px !important;
+    border-radius: 50% !important;
+    margin-right: 15px !important;
+    object-fit: cover !important;
+}
+
+/* Text Container */
+.messages-page .chat-info {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Name and Time Row (WhatsApp Alignment) */
+.messages-page .chat-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.messages-page .chat-header h3 {
+    color: #ffffff !important; 
+    font-size: 16.5px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+}
+
+.messages-page .time {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 12px !important;
+}
+
+/* Message Preview */
+.messages-page .chat-info p {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 14px !important;
+    margin: 2px 0 0 0 !important;
+    text-align: left !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+
+/* ============ 🚀 NAV BAR & FORM (RETAINED) ============ */
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    backdrop-filter: blur(10px);
+}
+
+.nav-item {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.nav-item.active {
+    color: #ff4b2b;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 300px;
+    border: 1px solid rgba(245, 210, 122, 0.3);
+}
+/* =========================
+   WHATSAPP STYLE MESSAGES
+   ========================= */
+
+.messages-page {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: 
+        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)),
+        url("kabarak.jpg") no-repeat center center/cover;
+    
+    min-height: 100vh;
+    color: white;
+}
+
+/* Title */
+.messages-page h1 {
+    text-align: center;
+    color: #f5d27a;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+/* Chat List */
+.chat-list {
+    padding: 0 12px 90px 12px;
+}
+
+/* Each Row */
+.chat-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: white;
+
+    padding: 12px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    position: relative;
+}
+
+/* Avatar */
+.chat-img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Text area */
+.chat-info {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Name + Time */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+.chat-time {
+    font-size: 0.8rem;
+    color: #25d366;
+}
+
+/* Message Preview */
+.chat-info p {
+    margin: 4px 0 0;
+    font-size: 0.9rem;
+    color: #bdbdbd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Online Dot */
+.online-dot {
+    width: 10px;
+    height: 10px;
+    background: #25d366;
+    border-radius: 50%;
+    position: absolute;
+    left: 48px;
+    bottom: 16px;
+    border: 2px solid #111;
+}
+
+/* Bottom Nav */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.92);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    backdrop-filter: blur(10px);
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: #777;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.nav-btn span {
+    display: block;
+    font-size: 1.2rem;
+}
+
+.nav-btn.active {
+    color: #25d366;
+}
+/* =========================
+   GLOBAL BACKGROUND RESTORE
+========================= */
+
+body{
+    background: url("kabarak.jpg") no-repeat center center/cover !important;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Dark overlay support */
+.overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 0;
+}
+
+/* Content above overlay */
+.container,
+form,
+.card,
+.chat-list,
+.bottom-nav{
+    position: relative;
+    z-index: 1;
+}
+/* =========================
+   RESTORE MESSAGES PAGE
+========================= */
+
+body.messages-page{
+    background:
+    linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)),
+    url("kabarak.jpg") no-repeat center center/cover !important;
+
+    min-height:100vh;
+    color:white;
+}
+
+/* Chat list spacing */
+.messages-page .chat-list{
+    padding:10px 0 95px;
+}
+
+/* WhatsApp style rows */
+.messages-page .chat-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:12px 16px;
+    text-decoration:none;
+    color:white;
+
+    position:relative;
+}
+
+/* Profile pics */
+.messages-page .chat-img{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+/* Text section */
+.messages-page .chat-info{
+    flex:1;
+    min-width:0;
+}
+
+.messages-page .chat-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:4px;
+}
+
+.messages-page .chat-header h3{
+    margin:0;
+    color:white;
+    font-size:1rem;
+}
+
+.messages-page .chat-time{
+    font-size:0.78rem;
+    color:#25d366;
+}
+
+.messages-page .chat-info p{
+    margin:0;
+    color:#bdbdbd;
+    font-size:0.9rem;
+
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+/* Online dot */
+.messages-page .online-dot{
+    width:11px;
+    height:11px;
+    border-radius:50%;
+    background:#25d366;
+
+    position:absolute;
+    left:50px;
+    bottom:16px;
+
+    border:2px solid #111;
+    box-shadow:0 0 8px #25d366;
+}
+.image-container {
+  position: relative;
+}
+.online-dot {
+    position: absolute !important;
+    top: 15px !important;
+    right: 15px !important;
+    left: auto !important;
+    bottom: auto !important;
+}
+/* ===== BRUTE FORCE WHATSAPP STYLE ===== */
+
+.chat-item {
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+
+    border-bottom: 1px solid #eee !important;
+}
+
+/* Kill any card/container styling */
+.chat-item * {
+    box-shadow: none !important;
+}
+
+/* Avatar */
+.avatar {
+    position: relative !important;
+    margin-right: 12px !important;
+}
+
+.avatar img {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
+}
+
+/* Online dot */
+.avatar .online-dot {
+    position: absolute !important;
+    bottom: 2px !important;
+    right: 2px !important;
+
+    width: 10px !important;
+    height: 10px !important;
+    background: #25D366 !important;
+    border-radius: 50% !important;
+    border: 2px solid white !important;
+}
+
+/* Layout */
+.chat-info {
+    flex: 1 !important;
+}
+
+.chat-top {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.chat-top h4 {
+    margin: 0 !important;
+    font-size: 15px !important;
+}
+
+.time {
+    font-size: 12px !important;
+    color: gray !important;
+}
+
+.last-message {
+    margin: 2px 0 0 !important;
+    font-size: 14px !important;
+    color: gray !important;
+}
+
+/* Touch effect */
+.chat-item:active {
+    background: #f5f5f5 !important;
+}
+/* ============ 💬 CLEAN WHATSAPP UI LIST ============ */
+
+.messages-page {
+    width: 100%;
+    padding: 0; /* Remove top padding to start list at the very top */
+    display: flex;
+    flex-direction: column;
+}
+
+.messages-page .chat-item {
+    width: 100% !important; /* Full width lengthy look */
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    text-decoration: none !important;
+    
+    /* 💎 Subtle Glassmorphism */
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px);
+    
+    /* The "Panel Killer": No margins or rounded corners */
+    margin: 0 !important;
+    border-radius: 0 !important;
+    
+    /* Clean divider line like WhatsApp */
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 🔥 THE RECTANGLE KILLER: Force all internal boxes to be transparent */
+.messages-page .chat-item *,
+.messages-page .chat-info,
+.messages-page .chat-header {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: auto !important;
+}
+
+/* WhatsApp Image Style */
+.messages-page .chat-img {
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 50% !important;
+    margin-right: 15px !important;
+    object-fit: cover !important;
+}
+
+/* Text Container Alignment */
+.messages-page .chat-info {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Top Row: Name and Time */
+.messages-page .chat-header {
+    display: flex !important;
+    justify-content: space-between !important; /* Pins time to the far right */
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.messages-page .chat-header h3 {
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+}
+
+.messages-page .time {
+    color: rgba(255, 255, 255, 0.5) !important; /* Muted time color */
+    font-size: 12px !important;
+}
+
+/* Bottom Row: Message Preview */
+.messages-page .chat-info p {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 14px !important;
+    margin-top: 2px !important;
+    text-align: left !important;
+    /* Keeps text on one line with ... */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+/* ============ 💬 CLEAN WHATSAPP UI LIST ============ */
+
+/* The Container */
+.chat-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* The Individual Items (No more panels!) */
+.messages-page .chat-item {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    text-decoration: none !important;
+    
+    /* 💎 Sexy Glassmorphism */
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px);
+    
+    /* ❌ THE PANEL KILLER ❌ */
+    margin: 0 !important;        /* Removes the space between panels */
+    border-radius: 0 !important; /* Makes it a flat list, not boxes */
+    border: none !important;
+    
+    /* Thin divider line like real WhatsApp */
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 💀 THE RECTANGLE KILLER (Force everything inside to be invisible) */
+.messages-page .chat-item *, 
+.messages-page .chat-info, 
+.messages-page .chat-header {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: auto !important;
+}
+
+/* WhatsApp Name & Time Alignment */
+.messages-page .chat-header {
+    display: flex !important;
+    justify-content: space-between !important; /* Pushes time to the right */
+    width: 100% !important;
+    align-items: center !important;
+}
+
+.messages-page .chat-header h3 {
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+}
+
+.messages-page .chat-time {
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 12px !important;
+}
+
+/* Message Preview Text */
+.messages-page .chat-info p {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 14px !important;
+    margin-top: 3px !important;
+    text-align: left !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Profile Picture */
+.messages-page .chat-img {
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 50% !important;
+    margin-right: 15px !important;
+    object-fit: cover !important;
+}
+/* ============ 🚀 FINAL WHATSAPP UI (MESSAGES ONLY) ============ */
+
+/* 1. Fix the Search Bar at the top */
+.top-header {
+    padding: 15px 16px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.search-box {
+    width: 100%;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.08) !important; /* Subtle glass search */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 20px !important;
+    padding: 0 18px !important;
+    color: #ffffff !important;
+    font-size: 15px !important;
+    outline: none !important;
+}
+
+.search-box::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* 2. The Clean List (No bulky panels) */
+.messages-page .chat-item {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    text-decoration: none !important;
+    
+    /* 💎 Seamless Glassmorphism */
+    background: rgba(255, 255, 255, 0.04) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px);
+    
+    /* KILL THE PANELS: Remove space and rounding */
+    margin: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    
+    /* Subtle divider like real WhatsApp */
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* 💀 THE RECTANGLE KILLER (Forces all inner boxes to be invisible) */
+.messages-page .chat-item *, 
+.messages-page .chat-info, 
+.messages-page .chat-header {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: auto !important;
+}
+
+/* 3. Text Alignment (Pro WhatsApp Look) */
+.messages-page .chat-header {
+    display: flex !important;
+    justify-content: space-between !important; /* Name left, Time right */
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.messages-page .chat-header h3 {
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+.messages-page .chat-time {
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 12px !important;
+}
+
+.messages-page .chat-info p {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 14px !important;
+    margin-top: 3px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+
+/* 4. Profile Pic */
+.messages-page .chat-img {
+    width: 54px !important;
+    height: 54px !important;
+    border-radius: 50% !important;
+    margin-right: 15px !important;
+    object-fit: cover !important;
+}
+/* ============ 💬 THE FINAL PANEL KILLER (WHATSAPP LIST) ============ */
+
+.messages-page .chat-item {
+    /* 1. Remove the "Panel" shape */
+    width: 100% !important; 
+    margin: 0 !important;        /* Kills the space between items */
+    border-radius: 0 !important; /* Kills the rounded corners */
+    
+    /* 2. Seamless Glass Effect */
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px);
+    
+    /* 3. Layout & Divider */
+    display: flex !important;
+    align-items: center !important;
+    padding: 10px 16px !important; /* Slender row height */
+    text-decoration: none !important;
+    border: none !important;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08) !important; /* Thin divider */
+}
+
+/* 💀 RECTANGLE KILLER (Forces internal containers to be 100% invisible) */
+.messages-page .chat-item *, 
+.messages-page .chat-info, 
+.messages-page .chat-header {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: auto !important;
+}
+
+/* WhatsApp Alignment Fix */
+.messages-page .chat-info {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding-left: 12px !important;
+}
+
+.messages-page .chat-header {
+    display: flex !important;
+    justify-content: space-between !important; /* Name left, Time right */
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.messages-page .chat-header h3 {
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+}
+
+.messages-page .chat-time {
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 11px !important;
+}
+
+.messages-page .chat-info p {
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 13.5px !important;
+    margin-top: 2px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+
+/* Smaller, clean profile circles */
+.messages-page .chat-img {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+}
+/* ============ 🚫 THE ABSOLUTE PANEL KILLER ============ */
+
+/* 1. Force the container to be a tight vertical stack */
+.chat-list {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 2. Strip every 'box' property from the items */
+.messages-page .chat-item {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 10px 16px !important; /* Tighter WhatsApp height */
+    text-decoration: none !important;
+    
+    /* KILL EVERYTHING THAT MAKES IT A PANEL */
+    margin: 0 !important;           /* Remove gaps between items */
+    border-radius: 0 !important;    /* Remove rounded corners */
+    box-shadow: none !important;    /* Remove any shadows */
+    border: none !important;        /* Clear old borders */
+    
+    /* 💎 Seamless Glass (very subtle) */
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px);
+    
+    /* Add only the single bottom divider line */
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* 💀 RECTANGLE KILLER: Forces all internal divs to be invisible */
+.messages-page .chat-item *, 
+.messages-page .chat-info, 
+.messages-page .chat-header {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* 3. True WhatsApp Alignment */
+.messages-page .chat-header {
+    display: flex !important;
+    justify-content: space-between !important; /* Pushes time to far right */
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.messages-page .chat-header h3 {
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+}
+
+.messages-page .chat-time {
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 11px !important;
+}
+
+.messages-page .chat-info p {
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 13.5px !important;
+    margin-top: 2px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+
+/* Profile Picture */
+.messages-page .chat-img {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    margin-right: 12px !important;
+    object-fit: cover !important;
+}
+/* =========================================
+   💬 WHATSAPP THEME: PANEL ELIMINATION
+   ========================================= */
+
+/* 1. Kill the main "Box" container around the list */
+.messages-page .card {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important; /* Removes the double-blur effect */
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 2. Style individual Chat Items to look like WhatsApp rows */
+.messages-page .chat-item {
+    width: 100% !important;
+    padding: 15px 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    background: rgba(255, 255, 255, 0.03) !important; /* Extremely faint glow */
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px);
+    
+    /* Only a single thin divider line between chats */
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1) !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important; /* Squaring off items for a list feel */
+}
+
+/* 3. Kill all background/boxes on nested elements */
+.messages-page .chat-item *, 
+.messages-page .chat-info, 
+.messages-page .chat-header {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* 4. WhatsApp Header Alignment (Name on left, Time on right) */
+.messages-page .chat-header {
+    display: flex !important;
+    justify-content: space-between !important; 
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.messages-page .chat-header h3 {
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+}
+
+.messages-page .chat-time {
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 11px !important;
+}
+
+/* 5. Message Snippet Cleanup */
+.messages-page .chat-info p {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 14px !important;
+    margin: 4px 0 0 0 !important;
+    text-align: left !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds "..." if text is too long */
 }
