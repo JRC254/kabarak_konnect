@@ -1,50 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Room - Kabarak Konnect</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Messages - Kabarak Konnect</title>
+
+<!-- FIXED: make sure this matches EXACT file name -->
+<link rel="stylesheet" href="style.css">
+
 </head>
-<body class="chat-page">
 
-    <div class="chat-header">
-        <a href="messages.html" class="back-btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-        </a>
-        <img src="aisha.jpg" class="header-img" alt="Profile">
-        <div class="header-info">
-            <h3>Aisha</h3>
-            <div class="status-container">
-                <span class="status-dot"></span>
-                <span class="status-text">Online</span>
+<body class="messages-page">
+
+<!-- TOP -->
+<div class="top-header">
+    <input type="text" class="search-box" placeholder="Search chats">
+</div>
+
+<!-- CHATS -->
+<div class="chat-list">
+
+    <a href="chat-room.html?id=aisha_01" class="chat-item">
+        <div class="avatar">
+            <img src="aisha.jpg" class="chat-img" alt="Aisha">
+            <div class="online-dot"></div>
+        </div>
+
+        <div class="chat-info">
+            <div class="chat-header">
+                <h3>Aisha</h3>
+                <span class="chat-time">10:45 AM</span>
             </div>
+            <p>Hey 😊 You around today?</p>
         </div>
-    </div>
+    </a>
 
-    <div class="message-container">
-        <div class="message incoming">
-            <p>Hey! Are you on campus? 😊</p>
-            <span class="msg-time">10:45 AM</span>
-        </div>
-
-        <div class="message outgoing">
-            <p>Yeah, just leaving the library now. What's up?</p>
-            <span class="msg-time">10:46 AM</span>
+    <a href="chat-room.html?id=brenda_02" class="chat-item">
+        <div class="avatar">
+            <img src="brenda.jpg" class="chat-img" alt="Brenda">
         </div>
 
-        <div class="message incoming">
-            <p>Was wondering if you wanted to grab some coffee at the student center?</p>
-            <span class="msg-time">10:47 AM</span>
+        <div class="chat-info">
+            <div class="chat-header">
+                <h3>Brenda</h3>
+                <span class="chat-time">Yesterday</span>
+            </div>
+            <p>Seen 2 mins ago</p>
         </div>
-    </div>
+    </a>
 
-    <div class="chat-input-area">
-        <input type="text" placeholder="Type a message..." class="chat-input">
-        <button class="send-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-        </button>
-    </div>
+    <a href="chat-room.html?id=faith_03" class="chat-item">
+        <div class="avatar">
+            <img src="faith.jpg" class="chat-img" alt="Faith">
+        </div>
+
+        <div class="chat-info">
+            <div class="chat-header">
+                <h3>Faith</h3>
+                <span class="chat-time">Mon</span>
+            </div>
+            <p>Let's meet at library?</p>
+        </div>
+    </a>
+
+    <a href="#" class="chat-item">
+        <div class="avatar">
+            <img src="aisha.jpg" class="chat-img" alt="Joy">
+        </div>
+
+        <div class="chat-info">
+            <div class="chat-header">
+                <h3>Joy</h3>
+                <span class="chat-time">Sun</span>
+            </div>
+            <p>You disappeared 😒</p>
+        </div>
+    </a>
+
+</div>
+
+<!-- NAV -->
+<div class="bottom-nav">
+    <a href="discover.html" class="nav-btn">
+        <span>🔥</span>
+        <p>Discover</p>
+    </a>
+    
+    <!-- FIXED: lowercase -->
+    <a href="matches.html" class="nav-btn">
+        <span>❤️</span>
+        <p>Matches</p>
+    </a>
+
+    <a href="messages.html" class="nav-btn active">
+        <span>💬</span>
+        <p>Chat</p>
+    </a>
+
+    <!-- FIXED: lowercase -->
+    <a href="profile.html" class="nav-btn">
+        <span>👤</span>
+        <p>Profile</p>
+    </a>
+</div>
 
 </body>
 </html>
